@@ -11,5 +11,7 @@ package frc.robot;
  * Enumeration for some numbers that won't change
  */
 public class Constants {
-    
+    public static int
+        LEFT_DRIVE_ID = 1,
+        RIGHT_DRIVE_ID = 2; 
 }
