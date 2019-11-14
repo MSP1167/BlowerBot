@@ -12,11 +12,14 @@ package frc.robot;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import frc.robot.subsystems.SubsystemDrive;
 
 /**
  * Robot!
  */
 public class Robot extends TimedRobot {
+
+  public static SubsystemDrive SUB_DRIVE;
 
   /**
    * This function is run when the robot is first started up and should be
@@ -24,6 +27,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
+    SUB_DRIVE = new SubsystemDrive();
     DriverStation.reportWarning("ROBOT INIT, HAVE FUN", false);
   }
 
@@ -32,6 +36,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+    Scheduler.getInstance().run();
   }
 
   /**
